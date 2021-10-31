@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="icon" href="/assets/logo.png" type="image/png">
+        <title>WOODS</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    </head>
+    <body data-spy="scroll" data-target="#sidebar" data-offset="200">
+
+        <!--================Header Menu Area =================-->
+        <div class="header">
+            <a class="logo" href="index.html"><img src="/assets/banner_white.png" width="175px" alt=""></a>
+            <div class="header-right">
+                <a class="nav-link" href="index.html">Home</a></li>
+                <a class="nav-link" href="get_started.html">Get Started</a>
+                <a class="nav-link" href="datasets.html">Datasets</a>
+                <a class="nav-link" href="updates.html">Updates</a>
+                <a class="nav-link" href="/woods/index.html">Documentation</a>
+                <a class="nav-link" href="index.html">WOODS Tutorials</a>
+            </div>
+        </div>
+        <!--================Work Area =================-->
+        <!-- Top Navbar -->
+        <div class="row MainContent">
+            <!--Side Nav Bar -->
+            <nav class="col-xs-3 bs-docs-sidebar">
+                <ul id="sidebar" class="nav flex-column fixed">
+                    <li>
+                        <a class="nav-link" href="#quick-start">Quick Start</a>
+                        <ul class="nav flex-column">
+                            <li><a class="nav-link ml-3 my-1" href="#download">Download</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#train-a-model">Train a model</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#make-a-sweep">Make a Sweep</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#evaluate-a-model">Evaluate a Model</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#advanced-features">Advanced Features</a>
+                        <ul class="nav flex-column">
+                            <li><a class="nav-link ml-3 my-1" href="#preprocessing">Preprocessing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="col-md-6">
+                <div class="content" >
+                    <h2 class="list-item" id="quick-start">Quick Start</h2>
+                    <h3 class="list-item" id="download">Download</h3>
+                    <p>Some datasets require downloads before running any training scripts notably the PhysioNet dataset which requires a download (~50G) and preprocessing (~1h30)</p>
+                    <pre><code class="lang-sh">python3 -m woods<span class="hljs-selector-class">.scripts</span><span class="hljs-selector-class">.download</span> \
+                            --data_path ./data
+                    </code></pre>
+                    <h3 class="list-item" id="train-a-model">Train a Model</h3>
+                    <p>Train a single model using one objective on one dataset with one test environment</p>
+                    <pre><code class="lang-sh">python3 -m woods.main train \
+                            -<span class="ruby">-dataset Spurious_Fourier \
+                    </span>        -<span class="ruby">-objective ERM \
+                    </span>        -<span class="ruby">-test_env <span class="hljs-number">0</span> \
+                    </span>        -<span class="ruby">-data_path /hdd/data</span>
+                    </code></pre>
+                    <p>From a training run results, you can also visualiza the results with the following script</p>
+                    <pre><code class="lang-sh">python3 -m woods<span class="hljs-selector-class">.scripts</span><span class="hljs-selector-class">.visualize_results</span> \
+                            --result_path ./results/something.json
+                    </code></pre>
+                    <hr />
+                    <h3 class="list-item" id="make-a-sweep">Make a sweep</h3>
+                        <p>To launch a sweep, use the following script. Define a collection of Objective and Dataset to investigate a combination. All test environment are gonna be investigated automatically. By default, the sweep is gonna do a random search over 20 hyper parameter seeds with 3 trial seed each.</p>
+                        <pre><code class="lang-sh">python3 -m woods.scripts.hparams_sweep \
+                                -<span class="ruby">-dataset Spurious_Fourier \
+                        </span>        -<span class="ruby">-objective ERM IRM \
+                        </span>        -<span class="ruby">-save_path ./results \
+                        </span>        -<span class="ruby">-launcher local</span>
+                        </code></pre>
+                        <p>To change the number of seeds investigated, you can call the <code>--n_hparams</code> and <code>--n_trials</code> argument.</p>
+                        <pre><code class="lang-sh">python3 -m woods.scripts.hparams_sweep \
+                                -<span class="ruby">-dataset Spurious_Fourier TCMNIST_seq \
+                        </span>        -<span class="ruby">-objective ERM \
+                        </span>        -<span class="ruby">-save_path ./results \
+                        </span>        -<span class="ruby">-launcher local \
+                        </span>        -<span class="ruby">-n_hparams <span class="hljs-number">10</span> \
+                        </span>        -<span class="ruby">-n_trials <span class="hljs-number">1</span></span>
+                        </code></pre>
+                        <p>You can also specify which test environment you want to investigate using the <code>--unique_test_env</code> argument</p>
+                        <pre><code class="lang-sh">python3 -m woods.scripts.hparams_sweep \
+                                -<span class="ruby">-dataset Spurious_Fourier TCMNIST_seq \
+                        </span>        -<span class="ruby">-objective ERM IRM \
+                        </span>        -<span class="ruby">-save_path ./results \
+                        </span>        -<span class="ruby">-launcher local \
+                        </span>        -<span class="ruby">-unique_test_env <span class="hljs-number">0</span></span>
+                        </code></pre>
+                        <p>When the sweep is complete you can compile the results in neat tables, the &#39;--latex&#39; argument outputs a table that can be directly copy pasted into a .tex documents (with the <em>**</em> package)</p>
+                        <pre><code class="lang-sh">python3 -m woods.scripts.compile_results \
+                                -<span class="ruby">-results_dir ./results \
+                        </span>        -<span class="ruby">-latex</span>
+                        </code></pre>
+                    <h3 class="list-item" id="evaluate-a-model">Evaluate a model</h3>
+                        <p>Evaluate a single model using one objective on one dataset with one test environment</p>
+                        <pre>
+                            <code class="lang-sh">python3 -m woods.main eval \
+                                -<span class="ruby">-model_path something\
+                            </span>        -<span class="ruby">-dataset Spurious_Fourier \
+                            </span>        -<span class="ruby">-objective ERM \
+                            </span>        -<span class="ruby">-test_env <span class="hljs-number">0</span></span>
+                            </code></pre>
+                    <hr />
+                    <h2 class="list-item" id="advanced-features">Advanced Features</h2>
+                    <h3 class="list-item" id="preprocessing">Preprocessing</h3>
+                </div>
+            </div>  
+            <hr>
+        </div>
+    </body>
+</html>
+    
