@@ -289,7 +289,7 @@ margin: 0 auto;
       .home_banner_area .banner_inner .banner_content .banner_map_img {
         text-align: right; }
       .home_banner_area .banner_inner .banner_content .banner_btn {
-        margin-right: 10px; }
+        margin: 5px 5px; }
       .home_banner_area .banner_inner .banner_content .banner_btn2 {
         margin-right: 10px; }
 
@@ -548,6 +548,7 @@ margin: 0 auto;
 }
 
 .content p{
+    color: rgb(53, 53, 53);
     font-size:20px;
     line-height: 30px;
 }
@@ -2821,7 +2822,7 @@ h6 {
   background: rgba(255, 255, 255, 0);
   color: #fff;
   font-family: "Lato", sans-serif;
-  width: 150px;
+  width: 275px;
   font-size: 14px;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 1);
@@ -2968,36 +2969,40 @@ h6 {
   margin-bottom: -50px; }
 
 .work_item {
-  text-align: center;
-  margin-bottom: 50px; }
-  .work_item i {
+    text-align: center;
+    margin-bottom: 50px; }
+.work_item i {
     height: 80px;
     width: 80px;
-    border: 1px solid #eeeeee;
     border-radius: 5px;
-    background: #f9f9ff;
+    background: #ffffff;
     display: inline-block;
     text-align: center;
     line-height: 80px;
-    font-size: 30px;
-    color: #222222;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
     margin-bottom: 30px; }
-  .work_item h4 {
-    color: #222222;
+.work_item h4 {
+    color: rgb(0, 0, 0);
     font-size: 20px;
     margin-bottom: 15px; }
-  .work_item p {
+.work_item p {
+    transition: all 0 linear 0s;
     text-align: justify;
     max-width: 310px;
-    margin: auto; }
-  .work_item:hover i {
-    background-image: -moz-linear-gradient(0deg, #0a2463 0%, #3e92cc 100%);
-    background-image: -webkit-linear-gradient(0deg, #0a2463 0%, #3e92cc 100%);
-    background-image: -ms-linear-gradient(0deg, #0a2463 0%, #3e92cc 100%);
+    margin: auto;
+    color: rgb(0, 0, 0); }
+.work_item:hover i {
+    background-image: -moz-linear-gradient(0deg, #229455ff 0%, #0a2e1bff 100%);
+    background-image: -webkit-linear-gradient(0deg, #229455ff 0%, #0a2e1bff 100%);
+    background-image: -ms-linear-gradient(0deg, #229455ff 0%, #0a2e1bff 100%);
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
     color: #fff; }
-  .work_item:hover h4 {
-    color: #3bacf0; }
+.work_item:hover h4 {
+    color: #229455ff; }
+.work_item:hover p {
+    color: #0a2e1bff;
+    transition: all 0s; }
 
 /* End Work Area css
 ============================================================================================ */
