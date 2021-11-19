@@ -47,6 +47,49 @@ Table of Content:
 /* clair */
 /* #3e92cc */
 
+.content .Citation-box {
+    font-size: 14px;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-left-color: var(--pale_pine);
+    background-color: var(--dark_pine);
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.task {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+.domain {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+.img-with-text {
+    text-align: center;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+
+.img-with-text p {
+    font-size: 14px !important;
+}
+
+.abstract {
+    margin: 0 auto;
+    width: 40em;
+    font-size: 16px;
+    color: rgb(0, 0, 0) !important;
+}
 
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,500,700");
@@ -81,6 +124,10 @@ h1, h2, h3, h4, h5, h6 {
 button:focus {
   outline: none;
   box-shadow: none; }
+
+.front_pad {
+padding-top: 50px;
+padding-bottom: 25px; }
 
 .p_120 {
   padding-top: 120px;
