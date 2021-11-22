@@ -62,7 +62,7 @@ Table of Content:
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 60%;
   }
 .domain {
       display: block;
@@ -86,7 +86,7 @@ Table of Content:
 
 .abstract {
     margin: 0 auto;
-    width: 40em;
+    width: 60em;
     font-size: 16px;
     color: rgb(0, 0, 0) !important;
 }
