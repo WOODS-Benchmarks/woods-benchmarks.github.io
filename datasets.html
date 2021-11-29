@@ -80,21 +80,21 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link" href="#MI">MI</a>
+                        <a class="nav-link" href="#PCL">PCL</a>
                         <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#MI-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#MI-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#MI-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#MI-license">License</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#PCL-motivation">Motivation</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#PCL-problem">Problem</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#PCL-source-citation">Source & Citation</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#PCL-license">License</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link" href="#HAR">HAR</a>
+                        <a class="nav-link" href="#HHAR">HHAR</a>
                         <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#HAR-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HAR-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HAR-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HAR-license">License</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#HHAR-motivation">Motivation</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#HHAR-problem">Problem</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#HHAR-source-citation">Source & Citation</a></li>
+                            <li><a class="nav-link ml-3 my-1" href="#HHAR-license">License</a></li>
                         </ul>
                     </li>
                     <li>
@@ -241,24 +241,24 @@
                         This project is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0. </a>
                     </p>
                     <hr />
-                    <h1 class="list-item" id="MI">MI</h1>
-                    <h2 class="list-item" id="MI-motivation">Motivation</h2>
+                    <h1 class="list-item" id="PCL">PCL</h1>
+                    <h2 class="list-item" id="PCL-motivation">Motivation</h2>
                     <p>
-                        In computational medicine, the ultimate goal is to train a model on a set of data gathered from a small number of patients and then to apply this model on data coming from new patients in order to assist on the diagnosis of the patient. Aside from previously mentioned distributional shifts caused by shifts in patient demographic and changes in machinery used for measurements, another contributing factor to distributional shift is the human factor impacting the procedures surrounding the data recording. Small changes in data gathering procedures can lead to failure of generalization between medical groups and hospitals, one known instance of this failure mode is the Camelyon17 dataset from WILDS. This challenge is especially prevalent in temporal medical data as machinery - like EEG, MEG and others - are very complex tools which are greatly affected by non-linear effects and modulations caused by context and preparations made before the recording. We investigate this procedural shift in data in the MI dataset.
+                        In computational medicine, the ultimate goal is to train a model on a set of data gathered from a small number of patients and then to apply this model on data coming from new patients in order to assist on the diagnosis of the patient. Aside from previously mentioned distributional shifts caused by shifts in patient demographic and changes in machinery used for measurements, another contributing factor to distributional shift is the human factor impacting the procedures surrounding the data recording. Small changes in data gathering procedures can lead to failure of generalization between medical groups and hospitals, one known instance of this failure mode is the Camelyon17 dataset from WILDS. This challenge is especially prevalent in temporal medical data as machinery - like EEG, MEG and others - are very complex tools which are greatly affected by non-linear effects and modulations caused by context and preparations made before the recording. We investigate this procedural shift in data in the PCL dataset.
                     </p>
-                    <h2 class="list-item" id="MI-problem">Problem</h2>
+                    <h2 class="list-item" id="PCL-problem">Problem</h2>
                     <div class="img-with-text">
-                        <img src="assets/MI_task.png" alt="MI-problem" class="task">
-                        <p>Figure 11: MI task</p>
+                        <img src="assets/PCL_task.png" alt="PCL-problem" class="task">
+                        <p>Figure 11: PCL task</p>
                     </div>
                     <p>
                         There are 3 datasets [PhysionetMI, BNCI2014001, Lee2019_MI], which feature EEG recording from multiple research groups that share a common task. This task is binary classification of imagined hand movements (left or right) from EEG data. Two of those datasets are subsets of the original data as we took the intersection of the common labels across all 3 datasets (BNCI2014001 and Lee2019_MI have 2 more classes that are excluded in the frame of this benchmark).
                     </p>
                     <div class="img-with-text">
-                        <img src="assets/MI_dom.png" alt="MI-dom" class="domain">
-                        <p>Figure 12: MI domains</p>
+                        <img src="assets/PCL_dom.png" alt="PCL-dom" class="domain">
+                        <p>Figure 12: PCL domains</p>
                     </div>
-                    <h2 class="list-item" id="MI-source-citation">Source & Citation</h2>
+                    <h2 class="list-item" id="PCL-source-citation">Source & Citation</h2>
                     <p class="Citation-box">
                         [1] Tangermann, M., Müller, K.R., Aertsen, A., Birbaumer, N., Braun, C., Brunner, C., Leeb, R., Mehring, C., Miller, K.J., Mueller-Putz, G. and Nolte, G., 2012. Review of the BCI competition IV. Frontiers in neuroscience, 6, p.55.
                         <br />
@@ -271,29 +271,29 @@
                         <br />
                         [4] Lee MH, Kwon OY, Kim YJ, Kim HK, Lee YE, Williamson J, Fazli S, Lee SW. EEG dataset and OpenBMI toolbox for three BCI paradigms: an investigation into BCI illiteracy. Gigascience. 2019 May 1;8(5):giz002. doi: 10.1093/gigascience/giz002. PMID: 30698704; PMCID: PMC6501944.
                     </p>
-                    <h2 class="list-item" id="MI-license">License</h2>
+                    <h2 class="list-item" id="PCL-license">License</h2>
                     <p>
                         This dataset gathers data from multiple sources, therefore has multiple licenses attached to the dataset. The physionetMI dataset is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0.</a> The Lee2019_MI dataset is licensed under <a href="https://creativecommons.org/share-your-work/public-domain/cc0"> No Rights Reserved License.</a> The BNCI2014001 dataset is freely available on the <a href="http://www.bbci.de/competition/iv/"> BCI Competition IV website</a> with the only restriction that [1] is referenced upon publication of results.
                     </p>
                     <hr />
-                    <h1 class="list-item" id="HAR">HAR</h1>
-                    <h2 class="list-item" id="HAR-motivation">Motivation</h2>
+                    <h1 class="list-item" id="HHAR">HHAR</h1>
+                    <h2 class="list-item" id="HHAR-motivation">Motivation</h2>
                     <p>
                         In temporal data, the invariant features needed to make predictions might be highly convolved in time with other uninformative features. The ability to extract causal temporal features from data is a very hard task that is needed in order to find a representation of the data that is invariant and interpretable. This dataset serves the purpose of investigating the ability of models to ignore uninformative information from complex signals.
                     </p>
-                    <h2 class="list-item" id="HAR-problem">Problem</h2>
+                    <h2 class="list-item" id="HHAR-problem">Problem</h2>
                     <div class="img-with-text">
-                        <img src="assets/HAR_task.png" alt="HAR-problem" class="task">
-                        <p>Figure 13: HAR task</p>
+                        <img src="assets/HHAR_task.png" alt="HHAR-problem" class="task">
+                        <p>Figure 13: HHAR task</p>
                     </div>
                     <p>
                         The task is a 6-class activity classification task from sensor data gathered from portable devices (phones and smart watches). Sensor data consists of 3-axis accelerometer measurements and 3-axis gyroscope measurements. There are 5 domains stemming from 5 different devices: [Nexus4, S3, S3Mini, LGWatch, Gear watch]. The challenge is to find the invariant sensory features across phones and watches, which aren’t located on the same body parts. Here watches might have extra oscillations on certain axes compared to phones while walking for example since they are worn on the wrists.
                     </p>
                     <div class="img-with-text">
-                        <img src="assets/HAR_dom.png" alt="HAR-dom" class="domain">
-                        <p>Figure 14: HAR domains</p>
+                        <img src="assets/HHAR_dom.png" alt="HHAR-dom" class="domain">
+                        <p>Figure 14: HHAR domains</p>
                     </div>
-                    <h2 class="list-item" id="HAR-source-citation">Source & Citation</h2>
+                    <h2 class="list-item" id="HHAR-source-citation">Source & Citation</h2>
                     <p class="Citation-box">
                         [1] Allan Stisen, Henrik Blunck, Sourav Bhattacharya, Thor Siiger Prentow, Mikkel Baun Kjærgaard, Anind Dey, Tobias Sonne, and Mads Møller Jensen "Smart Devices are Different: Assessing and Mitigating Mobile Sensing Heterogeneities for Activity Recognition" In Proc. 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015), Seoul, Korea, 2015.
                         <br />
@@ -301,7 +301,7 @@
 
                         [2] Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
                     </p>
-                    <h2 class="list-item" id="HAR-license">License</h2>
+                    <h2 class="list-item" id="HHAR-license">License</h2>
                     <p>
                         This project is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0. </a>
                     </p>
