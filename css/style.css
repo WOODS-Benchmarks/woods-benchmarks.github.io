@@ -93,7 +93,7 @@ Table of Content:
 
 .contributor-img{
     border-radius: 50%;
-    height: 100px;
+    height: 100px !important;
     margin-bottom: 20px;
 }
 
