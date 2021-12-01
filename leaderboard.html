@@ -115,13 +115,22 @@
                 <div class="content"  style="padding-top: -1000px; padding-left: 5em ">
                     <h1 class="list-item" id="overview">Overview</h1>
                     <h2 class="list-item" id="overview-summary">Summary</h2>
+                    <p>
+                    WOODS has 2 model selection methods based on DomainBed (Gulrajani and Lopez-Paz, 2021):
+                    <ul>
+                        <li><p> <b>Train Domain Validation</b>: We split each trainin domain into training (in) and validation (out) subsets. We tran models using the training subset and choose the model maximizing the accuracy on the union of validation subsets. We then report the test accuracy of the chosen model on the test domain.
+                        </p></li>
+                        <li><p><b>Test Domain Validation</b>: We choose the model maximizing the accuracy on a validation set that followes the distribution of the test domain. We allow one query (the last checkpoint) per choice of hyperparameters, disallowing early stopping. This breaks the OOD generalization assumption that models does not have access to the test domain, but this metric is still insightful as to performance of different objectives.
+                        </p></li>
+                    </ul>
+                    </p>
                     <h2 class="list-item" id="overview-train"></h2>
                     <div class="img-with-text">
-                        <img src="Results/summary_train.png" alt="summary-train-Results" style="width: 70%;">
+                        <img src="Results/summary_train.png" alt="summary-train-Results" style="width: 100%;">
                     </div>
                     <h2 class="list-item" id="overview-test"></h2>
                     <div class="img-with-text">
-                        <img src="Results/summary_test.png" alt="summary-test-Results" style="width: 70%;">
+                        <img src="Results/summary_test.png" alt="summary-test-Results" style="width: 100%;">
                     </div>
                     <hr />
                     <h1 class="list-item" id="spuriousfourier">Spurious Fourier</h1>
