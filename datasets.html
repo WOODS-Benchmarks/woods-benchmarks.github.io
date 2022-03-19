@@ -113,29 +113,29 @@
                     <h1 class="list-item" id="overview">Overview</h1>
                     <h2 class="list-item" id="overview-summary">Summary</h2>
                     <p>
-                        WOODS is a curated collection of benchmarks for the Out-of-Distribution (OoD) generalization field. It is specifically aimed at sequential prediction tasks, i.e. tasks where the data takes sequential or temporal form. Tasks fall under 2 categories: classification and regression. All datasets consist of multiple domains, each of which follows different data distributions, but all domains have the same target/task that we are trying to predict., e.g. EEG data of patients taken with different machines or trying to predict signed words from videos of different signers.
+                        The WOODS datasets are challenging with respect to their distributional shifts. Significant distributional shifts that lead to a large generalization gap between training and testing help us differentiate between algorithms that provide meaningful improvement and algorithms that provide marginal improvement. 
                     </p>
                     <p>
-                        The methodology to measure domain generalization with our benchmarks is to create disjoint sets of training and testing domains. The training domain is used to train a model, and the testing domain is used to evaluate the model on OoD domains. Similar to cross-validation, we can evaluate over all domains (with one domain held-out) to have a complete evaluation of a method on a benchmark.
+                        The WOODS datasets also target unresolved problems in their respective fields of study. Thus, this set of benchmarks not only serves to evaluate the performance of OOD generalization algorithms but also serves the field of study from which they stem. Progress on any of our datasets would be mutually beneficial for both the OOD generalization field and the associated application research field.
                     </p>
                     <h2 class="list-item" id="overview-list">List</h2>
                     <div class="img-with-text"> 
-                        <img src="assets/all_dataset.png" alt="woods-datasets" style="width: 100%">
+                        <img src="assets/Dataset_summary.png" alt="woods-datasets" style="width: 100%">
                         <p>Figure 1: List of all available datasets in WOODS</p>
                     </div>
                     <hr />
                     <h1 class="list-item" id="spuriousfourier">Spurious Fourier</h1>
                     <h2 class="list-item" id="SF-motivation">Motivation</h2>
                     <p>
-                        At the time of WOODS creation, the OoD generalization field has little work addressing the possible distributional shifts that could appear in sequential/temporal data. Common toy/synthetic datasets that lead to better interpretation of the problem are all image based, e.g. Colored MNIST, Rotated MNIST. In this dataset we aim to show in a simple formulation that temporal data have their own problems which aren’t present in the image modality.
+                        Consider the task of distinguishing cows and camels in pictures. We train a deep learning model to minimize the empirical risk on a labeled dataset. However, the dataset is heavily tainted by selection bias, as the vast majority of cow images were taken in green pastures, and the vast majority of camel images were taken in sandy areas. At test time, we observe that our deep learning model consistently and confidently classifies images of cows on sandy beaches as camels. We conclude that the model successfully minimized the empirical risk over the training dataset by leveraging the selection bias, thus classifying green backgrounds as cows and beige backgrounds as camels. In the Spurious-Fourier dataset, we adapt this same problem in the time series setting.
                     </p>
                     <h2 class="list-item" id="SF-problem">Problem</h2>
                     <div class="img-with-text">
-                        <img src="assets/SF_task.png" alt="spuriousfourier-problem" class="task" >
-                        <p>Figure 2: Spurious Fourier dataset task</p>
+                        <img src="assets/SF_explanatory.png" alt="spuriousfourier-problem" class="task" >
+                        <p>Figure 2: Fourier spectrum construction in the Spurious-Fourier dataset. </p>
                     </div>
-                    <p>                        
-                        The task here is to perform binary classification of 1 dimensional sinusoidal signals based on their frequency characteristics, i.e. their fourier spectrum. More specifically, the model has to predict if the signal belongs to the 50Hz or 60Hz peak (see Figure 2). This simple task is also in WOODS under the name of Basic_Fourier as a proof of concept that this task is feasible, but isn’t an OoD benchmark. However, we reproduce the distributional shift property of the Colored MNIST dataset. We first add 25% label noise to the whole dataset, so the maximum accuracy that can be achieved with the 50/60Hz peaks information is 75%. Then we add low frequency peaks to the fourier spectrum which are strongly correlated with the label. This level of correlation is a function of the data the domain is sampled from : [10,80%,90%] (See Figure 3).
+                    <p> 
+                        We create a dataset composed of one-dimensional signals, where the task is to perform binary classification based on the frequency characteristics. Signals are constructed from Fourier spectrums with one low-frequency peak (L) and one high-frequency peak (H). The low-frequency peak is one of the two possible frequencies (L<sub>A</sub> or L<sub>B</sub>), and the high-frequency peak is also one of two possible frequencies (H<sub>A</sub> or H<sub>B</sub>), see Figure 2. Domains contain signal-label pairs, where the label is a noisy function of the low- and high-frequencies such that low-frequency peaks bear a varying correlation of d with the label and high-frequency peaks bear an invariant correlation of 75% with the label
                     </p>
                     <div class="img-with-text">
                         <img src="assets/SF_dom.png" alt="spuriousfourier-dom" class="domain">
@@ -155,14 +155,14 @@
                     </p>
                     <h2 class="list-item" id="tcmnist-problem">Problem</h2>
                     <div class="img-with-text">
-                        <img src="assets/TCMNIST_task.png" alt="tcmnist-problem" class="task">
+                        <img src="assets/TCMNIST_explanatory_task.png" alt="tcmnist-problem" class="task">
                         <p>Figure 4: Temporal Colored MNIST task</p>
                     </div>
                     <p>
-                        In order to investigate this new unique setup, we create a semi-synthetic dataset using the MNIST dataset. We arranged all digits from MNIST into sequences of digits. Then the task is a binary classification task where the goal is to predict whether the sum of the current and previous digit in the sequence is odd or even. The sequences are 4 digits long and 3 predictions are made. This simple task is also in WOODS under the name of TMNIST (Temporal MNIST) as a proof of concept that this task is feasible, but isn’t an OoD benchmark.
+                        In light of the previously mentioned cow or camel classification problem, \citet{IRM} proposed the CMNIST dataset as a synthetic investigation of this problem. We propose an extension of this widely used dataset to time series, where we explore new domain formulations in multiple prediction (Section~\ref{sect:multiple_prediction}) tasks. 
                     </p>
                     <p>
-                        From this formulation, we add spuriousness to the dataset in a similar way to Colored MNIST by first adding 25% label noise to the whole dataset. Then we add colors to the digits according to 2 different domain definition paradigms that take form in 2 different datasets: Temporal Colored MNIST <b>Sequences</b> and Temporal Colored MNIST <b>Steps</b>.
+                        In Temporal Colored MNIST (TCMNIST), we create a binary classification task of video frames. Videos are sequences of four MNIST digits where the goal is to predict whether the sum of the current and previous digits in the sequence is odd or even, see Figure~\ref{fig:tcmnist_explain_task}. Prediction is made for all frames except for the first one. We use this one task definition to investigate both domain definition paradigms presented in Section~\ref{sect:problem_formulation_time_series}: Source-domains (Example~\ref{ex:source_domains}) and Time-domains (Example~\ref{ex:time_domains}).
                     </p>
                     <h3 class="list-item" id="tcmnist-seq">Temporal Colored MNIST Sequences</h3>
                     <p>

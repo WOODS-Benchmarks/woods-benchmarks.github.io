@@ -186,7 +186,7 @@ padding-bottom: 25px; }
     font-size: 16px;
     font-family: "Lato", sans-serif;
     line-height: 24px;
-    color: #777777;
+    color: #000000;
     margin-bottom: 0px;
     max-width: 570px;
     margin: auto; }
@@ -601,7 +601,7 @@ margin: 0 auto;
 }
 
 .content p{
-    color: rgb(53, 53, 53);
+    color: rgb(0, 0, 0);
     font-size:20px;
     line-height: 30px;
 }
@@ -1830,7 +1830,7 @@ margin: 0 auto;
   .element-wrap {
     margin-top: 30px; } }
 sup, sub, u, del {
-  color: #f8b600; }
+  color: #000000; }
 
 h1 {
   font-size: 36px; }
