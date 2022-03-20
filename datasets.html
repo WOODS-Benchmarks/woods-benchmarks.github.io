@@ -1,339 +1,636 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="icon" href="/assets/logo.png" type="image/png">
-        <title>WOODS</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    </head>
-    <body data-spy="scroll" data-target="#sidebar" data-offset="200">
+    <link rel="icon" href="/assets/logo.png" type="image/png">
+    <title>WOODS</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-        <!--================Header Menu Area =================-->
-        <div class="header">
-            <a class="logo" href="index.html"><img src="/assets/banner_white.png" width="175px" alt=""></a>
-            <div class="header-right">
-                <a class="nav-link" href="index.html">Home</a></li>
-                <a class="nav-link" href="https://woods.readthedocs.io/en/latest/installation.html">Get Started</a>
-                <a class="nav-link" href="datasets.html">Datasets</a>
-                <a class="nav-link" href="leaderboard.html">Leaderboard</a>
-                <a class="nav-link" href="updates.html">Updates</a>
-                <a class="nav-link" href="https://woods.readthedocs.io/en/latest">Read the Docs</a>
+</head>
 
+<body data-spy="scroll" data-target="#sidebar" data-offset="200">
+
+    <!--================Header Menu Area =================-->
+    <div class="header">
+        <a class="logo" href="index.html"><img src="/assets/banner_white.png"
+                width="175px" alt=""></a>
+        <div class="header-right">
+            <a class="nav-link" href="index.html">Home</a></li>
+            <a class="nav-link"
+                href="https://woods.readthedocs.io/en/latest/installation.html">Get
+                Started</a>
+            <a class="nav-link" href="datasets.html">Datasets</a>
+            <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+            <a class="nav-link" href="updates.html">Updates</a>
+            <a class="nav-link"
+                href="https://woods.readthedocs.io/en/latest">Read the Docs</a>
+
+        </div>
+    </div>
+    <!--================Work Area =================-->
+    <!-- Top Navbar -->
+    <div class="row MainContent">
+        <!--Side Nav Bar -->
+        <nav class="col-xs-3 bs-docs-sidebar">
+            <ul id="sidebar" class="nav flex-column fixed">
+                <li>
+                    <a class="nav-link" href="#overview">Overview</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#overview-summary">Summary</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#overview-list">List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#spuriousfourier">Spurious
+                        Fourier</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SF-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SF-problem">Problem</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#tcmnist">Temporal Colored
+                        MNIST</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#tcmnist-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#tcmnist-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#tcmnist-seq">TCMNIST_seq</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#tcmnist-step">TCMNIST_step</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#CAP">CAP</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#CAP-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#CAP-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#CAP-source-citation">Source &
+                                Citation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#CAP-license">License</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#SEDFx">SEDFx</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SEDFx-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SEDFx-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SEDFx-source-citation">Source &
+                                Citation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#SEDFx-license">License</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#PCL">PCL</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#PCL-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#PCL-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#PCL-source-citation">Source &
+                                Citation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#PCL-license">License</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#HHAR">HHAR</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#HHAR-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#HHAR-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#HHAR-source-citation">Source &
+                                Citation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#HHAR-license">License</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#LSA64">LSA64</a>
+                    <ul class="nav flex-column">
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#LSA64-motivation">Motivation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#LSA64-problem">Problem</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#LSA64-source-citation">Source &
+                                Citation</a></li>
+                        <li><a class="nav-link ml-3 my-1"
+                                href="#LSA64-license">License</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-md-6">
+            <div class="content"
+                style="padding-top: -1000px; padding-left: 5em ">
+                <h1 class="list-item" id="overview">Overview</h1>
+                <h2 class="list-item" id="overview-summary">Summary</h2>
+                <p>
+                    The WOODS datasets are challenging with respect to their
+                    distributional shifts. Significant distributional shifts
+                    that lead to a large generalization gap between training and
+                    testing help us differentiate between algorithms that
+                    provide meaningful improvement and algorithms that provide
+                    marginal improvement.
+                </p>
+                <p>
+                    The WOODS datasets also target unresolved problems in their
+                    respective fields of study. Thus, this set of benchmarks not
+                    only serves to evaluate the performance of OOD
+                    generalization algorithms but also serves the field of study
+                    from which they stem. Progress on any of our datasets would
+                    be mutually beneficial for both the OOD generalization field
+                    and the associated application research field.
+                </p>
+                <h2 class="list-item" id="overview-list">List</h2>
+                <div class="img-with-text">
+                    <img src="assets/Dataset_summary.png" alt="woods-datasets"
+                        style="width: 100%">
+                    <p>Figure 1: List of all available datasets in WOODS</p>
+                </div>
+                <hr />
+                <h1 class="list-item" id="spuriousfourier">Spurious Fourier</h1>
+                <h2 class="list-item" id="SF-motivation">Motivation</h2>
+                <p>
+                    Consider the task of distinguishing cows and camels in
+                    pictures. We train a deep learning model to minimize the
+                    empirical risk on a labeled dataset. However, the dataset is
+                    heavily tainted by selection bias, as the vast majority of
+                    cow images were taken in green pastures, and the vast
+                    majority of camel images were taken in sandy areas. At test
+                    time, we observe that our deep learning model consistently
+                    and confidently classifies images of cows on sandy beaches
+                    as camels. We conclude that the model successfully minimized
+                    the empirical risk over the training dataset by leveraging
+                    the selection bias, thus classifying green backgrounds as
+                    cows and beige backgrounds as camels. In the
+                    Spurious-Fourier dataset, we adapt this same problem in the
+                    time series setting.
+                </p>
+                <h2 class="list-item" id="SF-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/SF_explanatory.png"
+                        alt="spuriousfourier-problem" class="task">
+                    <p>Figure 2: Fourier spectrum construction in the
+                        Spurious-Fourier dataset. </p>
+                </div>
+                <p>
+                    We create a dataset composed of one-dimensional signals,
+                    where the task is to perform binary classification based on
+                    the frequency characteristics. Signals are constructed from
+                    Fourier spectrums with one low-frequency peak (L) and one
+                    high-frequency peak (H). The low-frequency peak is one of
+                    the two possible frequencies (L<sub>A</sub> or
+                    L<sub>B</sub>), and the high-frequency peak is also one of
+                    two possible frequencies (H<sub>A</sub> or H<sub>B</sub>),
+                    see Figure 2. Domains contain signal-label pairs, where the
+                    label is a noisy function of the low- and high-frequencies
+                    such that low-frequency peaks bear a varying correlation of
+                    d with the label and high-frequency peaks bear an invariant
+                    correlation of 75% with the label
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/SF_dom.png" alt="spuriousfourier-dom"
+                        class="domain">
+                    <p>Figure 3: Spurious Fourier domains</p>
+                </div>
+                <hr />
+                <h1 class="list-item" id="tcmnist">Temporal Colored MNIST</h1>
+                <h2 class="list-item" id="tcmnist-motivation">Motivation</h2>
+                <p>
+                    In light of the previously mentioned cow or camel
+                    classification problem, Arjovsky et al. (2020) proposed the
+                    CMNIST dataset as a synthetic investigation of this problem.
+                    We extend this widely used dataset to time
+                    series, where we explore new domain formulations in multiple
+                    prediction tasks.
+                </p>
+                <h2 class="list-item" id="tcmnist-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/TCMNIST_explanatory_task.png"
+                        alt="tcmnist-problem" class="task">
+                    <p>Figure 4: Temporal Colored MNIST task</p>
+                </div>
+                <p>
+                    In Temporal Colored MNIST (TCMNIST), we create a binary
+                    classification task of video frames. Videos are sequences of
+                    four MNIST digits where the goal is to predict whether the
+                    sum of the current and previous digits in the sequence is
+                    odd or even, see Figure~\ref{fig:tcmnist_explain_task}.
+                    Prediction is made for all frames except for the first one.
+                    We use this one task definition to investigate both domain
+                    definition paradigms: Source-domains and Time-domains.
+                </p>
+                <h3 class="list-item" id="tcmnist-seq">Temporal Colored MNIST
+                    with Source-domains</h3>
+                <p>
+                    Domains d=[10%, 80%, 90%] contain videos
+                    where each frame depicts a digit colored either red or green
+                    (except for the first digit which is yellow). The label is a
+                    noisy function of the digit and color, such that the color
+                    bears a varying correlation of d with the label of the
+                    frame, and the digit information bears an invariant
+                    correlation of 75% with the label of the frame. The color
+                    correlation varies between sequences belonging to different
+                    domains but is constant among the video frames. The domain
+                    definition is visually depicted in
+                    Figure 5.
+                </p>
+                <p>
+                    Just like CMNIST, the color is spuriously correlated with
+                    the label, while the sum of digits is invariantly correlated
+                    with the label. We want to find a predictor that relies on
+                    the depicted digit to predict the label.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/TCMNIST_explanatory_source.png"
+                        alt="tcmnist-seq" class="domain">
+                    <p>Figure 5: Temporal Colored MNIST with Source-domains</p>
+                </div>
+                <h3 class="list-item" id="tcmnist-step">Temporal Colored MNIST
+                    Steps</h3>
+                <p>
+                    Video frames are grouped according to their order in the
+                    sequence and they form the domains d=[90%,80%,10%]. A single
+                    video sequence
+                    consists of video frames from multiple domains, where the
+                    domains always follow the same sequence:
+                    [90%,80%,10%]. The first frame does not have a
+                    domain, because it does not have a label. Similarly to the
+                    Source-domains, the label is a noisy function of the digit
+                    and color, such that the color bears a varying correlation
+                    of d with the label of the frame, and the sum of digits
+                    bears an invariant correlation of 75% with the label of the
+                    frame. The color correlation varies between the video
+                    frames, but is constant between all sequences in the
+                    dataset. The domain definition and time series structure are
+                    visually depicted in Figure 6.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/TCMNIST_explanatory_time.png"
+                        alt="tcmnist-step" class="domain">
+                    <p>Figure 6: Temporal Colored MNIST with Time-domains</p>
+                </div>
+                <hr />
+                <h1 class="list-item" id="CAP">CAP</h1>
+                <h2 class="list-item" id="CAP-motivation">Motivation</h2>
+                <p>
+                    A recurrent problem in computational medicine is that models
+                    trained on data from a given recording machine will not
+                    generalize to data coming from another machine, even when
+                    both machines are from a similar constructor. Failure to
+                    generalize to unseen machines can cause critical issues for
+                    clinical practice because a false sense of confidence in a
+                    model could lead to a false diagnosis. Furthermore, even
+                    when following the exact same data gathering procedures, a
+                    change in the recording machinery can lead to catastrophic
+                    distributional shifts. We study these machinery-induced
+                    distribution shifts with the CAP dataset.
+                </p>
+                <h2 class="list-item" id="CAP-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/CAP_task.png" alt="CAP-problem"
+                        class="task">
+                    <p>Figure 7: CAP task</p>
+                </div>
+                <p>
+                    We consider the sleep stage classification task from
+                    electroencephalographic (EEG) measurements. The labels are
+                    six sleep stages (i.e., Awake, Non-REM 1-2-3-4, and REM)
+                    labeled by experts in the field. The data comes from five
+                    different machines, which act as our five Source-domains.
+                    The goal is to generalize to unseen machines. As a whole,
+                    the dataset is composed of 40390 recordings of 30 seconds
+                    each from 19 EEG channels gathered on 41 participants.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/CAP_dom.png" alt="CAP-dom" class="domain">
+                    <p>Figure 8: CAP domains</p>
+                </div>
+                <h2 class="list-item" id="CAP-source-citation">Source & Citation
+                </h2>
+                <p class="Citation-box">
+                    [1] Terzano MG, Parrino L, Sherieri A, Chervin R,
+                    Chokroverty S, Guilleminault C, Hirshkowitz M, Mahowald M,
+                    Moldofsky H, Rosa A, Thomas R, Walters A. Atlas, rules, and
+                    recording techniques for the scoring of cyclic alternating
+                    pattern (CAP) in human sleep. Sleep Med. 2001
+                    Nov;2(6):537-53. doi: 10.1016/s1389-9457(01)00149-6. Erratum
+                    in: Sleep Med. 2002 Mar;3(2):185. PMID: 14592270.
+                    <br />
+                    <br />
+
+                    [2] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J.,
+                    Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000).
+                    PhysioBank, PhysioToolkit, and PhysioNet: Components of a
+                    new research resource for complex physiologic signals.
+                    Circulation [Online]. 101 (23), pp. e215–e220.
+                </p>
+                <h2 class="list-item" id="CAP-license">License</h2>
+                <p>
+                    This project is licensed under the <a
+                        href="https://opendatacommons.org/licenses/by/summary/index.html">
+                        Open Data Commons Attribution license v1.0. </a>
+                </p>
+                <hr />
+                <h1 class="list-item" id="SEDFx">SEDFx</h1>
+                <h2 class="list-item" id="SEDFx-motivation">Motivation</h2>
+                <p>
+                    In clinical settings, we train a model on the data gathered
+                    from a limited number of patients and hope this model will
+                    generalize to unseen patients in the
+                    future. However, this
+                    generalization between observed patients in the training
+                    dataset and new patients at the test time is not guaranteed.
+                    Distributional shifts caused by shifts in patient
+                    demographics (e.g., age, gender, and ethnicity) can cause
+                    the model to fail. We study these patient demographic shifts
+                    with the SEDFx dataset.
+                </p>
+                <h2 class="list-item" id="SEDFx-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/sedfx_task.png" alt="SEDFx-problem"
+                        class="task">
+                    <p>Figure 9: SEDFx task</p>
+                </div>
+                <p>
+                    We consider the sleep classification task from EEG
+                    measurements. The labels are six sleep stages (Awake,
+                    Non-REM 1-2-3-4, and REM) labeled by experts in the field.
+                    The data comes from five age groups, which act as our
+                    Source-domains. The goal is to generalize to an unseen age
+                    demographic. As a whole, the dataset is composed of 238712
+                    recordings of 30 seconds each from four EEG channels
+                    gathered on 100 participants.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/sedfx_dom.png" alt="SEDFx-dom"
+                        class="domain">
+                    <p>Figure 10: SEDFx domains</p>
+                </div>
+                <h2 class="list-item" id="SEDFx-source-citation">Source &
+                    Citation</h2>
+                <p class="Citation-box">
+                    [1] B. Kemp, A. H. Zwinderman, B. Tuk, H. A. C. Kamphuisen
+                    and J. J. L. Oberye, "Analysis of a sleep-dependent neuronal
+                    feedback loop: the slow-wave microcontinuity of the EEG," in
+                    IEEE Transactions on Biomedical Engineering, vol. 47, no. 9,
+                    pp. 1185-1194, Sept. 2000, doi: 10.1109/10.867928.
+                    <br />
+                    <br />
+
+                    [2] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J.,
+                    Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000).
+                    PhysioBank, PhysioToolkit, and PhysioNet: Components of a
+                    new research resource for complex physiologic signals.
+                    Circulation [Online]. 101 (23), pp. e215–e220.
+                </p>
+                <h2 class="list-item" id="SEDFx-license">License</h2>
+                <p>
+                    This project is licensed under the <a
+                        href="https://opendatacommons.org/licenses/by/summary/index.html">
+                        Open Data Commons Attribution license v1.0. </a>
+                </p>
+                <hr />
+                <h1 class="list-item" id="PCL">PCL</h1>
+                <h2 class="list-item" id="PCL-motivation">Motivation</h2>
+                <p>
+                    Aside from changes in the recording device and shifts in
+                    patient demographics, human intervention in the data
+                    gathering process is another contributing factor to the
+                    distributional shift that can lead to failure of clinical
+                    models. Specifically, a small change in the data-gathering
+                    procedures can cause procedural shifts that cause models to
+                    fail to generalize to other data gathering procedures. One
+                    known instance of this failure mode is the
+                    Camelyon17 dataset, where models fail to
+                    generalize to other hospitals because of differences in the
+                    staining procedure of lymph node slices. This challenge is
+                    especially prevalent in temporal medical data (e.g., EEG,
+                    MEG, and others) because recording devices are complex tools
+                    greatly affected by nonlinear effects and modulations. These
+                    effects are often caused by context and preparations made
+                    before the recording. We study these
+                    procedural shifts on the PCL dataset.
+                </p>
+                <h2 class="list-item" id="PCL-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/PCL_task.png" alt="PCL-problem"
+                        class="task">
+                    <p>Figure 11: PCL task</p>
+                </div>
+                <p>
+                    We consider the motor imagery task from
+                    electroencephalographic (EEG) measurements. The labels are
+                    two imagined movements (left hand and right hand). The
+                    dataset comes from three different hospitals performing the
+                    same task under different data gathering procedures and
+                    conditions. They act as our Source-domains. The goal is to
+                    generalize to unseen data gathering processes. As a whole,
+                    the dataset is composed of 22598 recordings of three seconds
+                    each from 48 EEG channels gathered with 215 participants.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/PCL_dom.png" alt="PCL-dom" class="domain">
+                    <p>Figure 12: PCL domains</p>
+                </div>
+                <h2 class="list-item" id="PCL-source-citation">Source & Citation
+                </h2>
+                <p class="Citation-box">
+                    [1] Tangermann, M., Müller, K.R., Aertsen, A., Birbaumer,
+                    N., Braun, C., Brunner, C., Leeb, R., Mehring, C., Miller,
+                    K.J., Mueller-Putz, G. and Nolte, G., 2012. Review of the
+                    BCI competition IV. Frontiers in neuroscience, 6, p.55.
+                    <br />
+                    <br />
+                    [2] Schalk, G., McFarland, D.J., Hinterberger, T.,
+                    Birbaumer, N. and Wolpaw, J.R., 2004. BCI2000: a
+                    general-purpose brain-computer interface (BCI) system. IEEE
+                    Transactions on biomedical engineering, 51(6), pp.1034-1043.
+                    <br />
+                    <br />
+                    [3] Goldberger, A.L., Amaral, L.A., Glass, L., Hausdorff,
+                    J.M., Ivanov, P.C., Mark, R.G., Mietus, J.E., Moody, G.B.,
+                    Peng, C.K., Stanley, H.E. and PhysioBank, P., PhysioNet:
+                    components of a new research resource for complex
+                    physiologic signals Circulation 2000 Volume 101 Issue 23 pp.
+                    E215–E220.
+                    <br />
+                    <br />
+                    [4] Lee MH, Kwon OY, Kim YJ, Kim HK, Lee YE, Williamson J,
+                    Fazli S, Lee SW. EEG dataset and OpenBMI toolbox for three
+                    BCI paradigms: an investigation into BCI illiteracy.
+                    Gigascience. 2019 May 1;8(5):giz002. doi:
+                    10.1093/gigascience/giz002. PMID: 30698704; PMCID:
+                    PMC6501944.
+                </p>
+                <h2 class="list-item" id="PCL-license">License</h2>
+                <p>
+                    This dataset gathers data from multiple sources, therefore
+                    has multiple licenses attached to the dataset. The
+                    physionetMI dataset is licensed under the <a
+                        href="https://opendatacommons.org/licenses/by/summary/index.html">
+                        Open Data Commons Attribution license v1.0.</a> The
+                    Lee2019_MI dataset is licensed under <a
+                        href="https://creativecommons.org/share-your-work/public-domain/cc0">
+                        No Rights Reserved License.</a> The BNCI2014001 dataset
+                    is freely available on the <a
+                        href="http://www.bbci.de/competition/iv/"> BCI
+                        Competition IV website</a> with the only restriction
+                    that [1] is referenced upon publication of results.
+                </p>
+                <hr />
+                <h1 class="list-item" id="HHAR">HHAR</h1>
+                <h2 class="list-item" id="HHAR-motivation">Motivation</h2>
+                <p>
+                    Invariant features needed to make predictions in time series
+                    are highly convoluted in time with other uninformative
+                    features. Because of this, it is a difficult task to extract
+                    invariant temporal features from data. We study the ability
+                    of models to ignore uninformative information from complex
+                    signals with the HHAR dataset.
+
+                </p>
+                <h2 class="list-item" id="HHAR-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/HHAR_task.png" alt="HHAR-problem"
+                        class="task">
+                    <p>Figure 13: HHAR task</p>
+                </div>
+                <p>
+                    We consider the human activity classification task from
+                    smart devices (smartphones and smartwatches) sensor data.
+                    Sensor data consists of three-axis accelerometer
+                    measurements and three-axis gyroscope measurements. The
+                    labels are six activities (Stand, Sit, Walk, Bike, Stairs
+                    up, and Stairs Down). The data originates from five
+                    different devices, which act as our Source-domains. The goal
+                    is to find the invariant sensory features across phones and
+                    watches. Because watches and cellphones are not worn in the
+                    same place on the body, one might have extra oscillations
+                    that the model should disregard. As a whole, the dataset is
+                    composed of 13674 recordings of five seconds each from six
+                    sensor channels.
+                </p>
+                <div class="img-with-text">
+                    <img src="assets/HHAR_dom.png" alt="HHAR-dom"
+                        class="domain">
+                    <p>Figure 14: HHAR domains</p>
+                </div>
+                <h2 class="list-item" id="HHAR-source-citation">Source &
+                    Citation</h2>
+                <p class="Citation-box">
+                    [1] Allan Stisen, Henrik Blunck, Sourav Bhattacharya, Thor
+                    Siiger Prentow, Mikkel Baun Kjærgaard, Anind Dey, Tobias
+                    Sonne, and Mads Møller Jensen "Smart Devices are Different:
+                    Assessing and Mitigating Mobile Sensing Heterogeneities for
+                    Activity Recognition" In Proc. 13th ACM Conference on
+                    Embedded Networked Sensor Systems (SenSys 2015), Seoul,
+                    Korea, 2015.
+                    <br />
+                    <br />
+
+                    [2] Dua, D. and Graff, C. (2019). UCI Machine Learning
+                    Repository [http://archive.ics.uci.edu/ml]. Irvine, CA:
+                    University of California, School of Information and Computer
+                    Science.
+                </p>
+                <h2 class="list-item" id="HHAR-license">License</h2>
+                <p>
+                    This project is licensed under the <a
+                        href="https://opendatacommons.org/licenses/by/summary/index.html">
+                        Open Data Commons Attribution license v1.0. </a>
+                </p>
+                <hr />
+                <h1 class="list-item" id="LSA64">LSA64</h1>
+                <h2 class="list-item" id="LSA64-motivation">Motivation</h2>
+                <div class="img-with-text">
+                    <img src="assets/LSA64_task.png" alt="LSA64-tast"
+                        class="task">
+                    <p>Figure 15: LSA64 task</p>
+                </div>
+                <p>
+                    Communication is an idiosyncratic way to convey information
+                    through different media: text, speech, body language, and
+                    many others. However, some media are more distinctive and
+                    challenging than others. For example, text communication has
+                    less interindividual variability than body language or
+                    speech. If deep learning systems hope to interact with
+                    humans effectively, models need to generalize to previously
+                    unseen mannerisms, accents, and other subtle variations in
+                    communication that significantly impact the meaning of the
+                    message conveyed. We study the ability of models to
+                    recognize information coming from unseen individuals in the
+                    LSA64 dataset.
+                </p>
+                <h2 class="list-item" id="LSA64-problem">Problem</h2>
+                <div class="img-with-text">
+                    <img src="assets/LSA64_dom.png" alt="LSA64-dom"
+                        class="domain">
+                    <p>Figure 16: LSA64 domains</p>
+                </div>
+                <p>
+                    We consider the video classification of signed words in
+                    Argentinian Sign Language. The labels are a dictionary of 64
+                    words. The dataset consists of ten different signers making
+                    multiple repetitions of all 64 words. From that, we create
+                    five Source-domains consisting of two speakers each. The
+                    goal is to generalize to unseen signers. As a whole, the
+                    dataset is composed of 3200 videos of two and a half seconds
+                    each at a resolution of (3,224,224).
+                </p>
+                <h2 class="list-item" id="LSA64-source-citation">Source &
+                    Citation</h2>
+                <p class="Citation-box">
+                    [1] Ronchetti, F., Quiroga, F., Estrebou, C., Lanzarini, L.,
+                    & Rosete, A. (2016). LSA64: A Dataset of Argentinian Sign
+                    Language. XX II Congreso Argentino de Ciencias de la
+                    Computación (CACIC).
+                </p>
+                <h2 class="list-item" id="LSA64-license">License</h2>
+                <p>
+                    This project is licensed under the <a
+                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
+                        Creative Commons Attribution-NonCommercial-ShareAlike
+                        4.0 International License </a>
+                </p>
             </div>
         </div>
-        <!--================Work Area =================-->
-        <!-- Top Navbar -->
-        <div class="row MainContent">
-            <!--Side Nav Bar -->
-            <nav class="col-xs-3 bs-docs-sidebar">
-                <ul id="sidebar" class="nav flex-column fixed">
-                    <li>
-                        <a class="nav-link" href="#overview">Overview</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#overview-summary">Summary</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#overview-list">List</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#spuriousfourier">Spurious Fourier</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#SF-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#SF-problem">Problem</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#tcmnist">Temporal Colored MNIST</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#tcmnist-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#tcmnist-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#tcmnist-seq">TCMNIST_seq</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#tcmnist-step">TCMNIST_step</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#CAP">CAP</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#CAP-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#CAP-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#CAP-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#CAP-license">License</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#SEDFx">SEDFx</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#SEDFx-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#SEDFx-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#SEDFx-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#SEDFx-license">License</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#PCL">PCL</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#PCL-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#PCL-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#PCL-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#PCL-license">License</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#HHAR">HHAR</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#HHAR-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HHAR-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HHAR-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#HHAR-license">License</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#LSA64">LSA64</a>
-                        <ul class="nav flex-column">
-                            <li><a class="nav-link ml-3 my-1" href="#LSA64-motivation">Motivation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#LSA64-problem">Problem</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#LSA64-source-citation">Source & Citation</a></li>
-                            <li><a class="nav-link ml-3 my-1" href="#LSA64-license">License</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="col-md-6">
-                <div class="content"  style="padding-top: -1000px; padding-left: 5em ">
-                    <h1 class="list-item" id="overview">Overview</h1>
-                    <h2 class="list-item" id="overview-summary">Summary</h2>
-                    <p>
-                        The WOODS datasets are challenging with respect to their distributional shifts. Significant distributional shifts that lead to a large generalization gap between training and testing help us differentiate between algorithms that provide meaningful improvement and algorithms that provide marginal improvement. 
-                    </p>
-                    <p>
-                        The WOODS datasets also target unresolved problems in their respective fields of study. Thus, this set of benchmarks not only serves to evaluate the performance of OOD generalization algorithms but also serves the field of study from which they stem. Progress on any of our datasets would be mutually beneficial for both the OOD generalization field and the associated application research field.
-                    </p>
-                    <h2 class="list-item" id="overview-list">List</h2>
-                    <div class="img-with-text"> 
-                        <img src="assets/Dataset_summary.png" alt="woods-datasets" style="width: 100%">
-                        <p>Figure 1: List of all available datasets in WOODS</p>
-                    </div>
-                    <hr />
-                    <h1 class="list-item" id="spuriousfourier">Spurious Fourier</h1>
-                    <h2 class="list-item" id="SF-motivation">Motivation</h2>
-                    <p>
-                        Consider the task of distinguishing cows and camels in pictures. We train a deep learning model to minimize the empirical risk on a labeled dataset. However, the dataset is heavily tainted by selection bias, as the vast majority of cow images were taken in green pastures, and the vast majority of camel images were taken in sandy areas. At test time, we observe that our deep learning model consistently and confidently classifies images of cows on sandy beaches as camels. We conclude that the model successfully minimized the empirical risk over the training dataset by leveraging the selection bias, thus classifying green backgrounds as cows and beige backgrounds as camels. In the Spurious-Fourier dataset, we adapt this same problem in the time series setting.
-                    </p>
-                    <h2 class="list-item" id="SF-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/SF_explanatory.png" alt="spuriousfourier-problem" class="task" >
-                        <p>Figure 2: Fourier spectrum construction in the Spurious-Fourier dataset. </p>
-                    </div>
-                    <p> 
-                        We create a dataset composed of one-dimensional signals, where the task is to perform binary classification based on the frequency characteristics. Signals are constructed from Fourier spectrums with one low-frequency peak (L) and one high-frequency peak (H). The low-frequency peak is one of the two possible frequencies (L<sub>A</sub> or L<sub>B</sub>), and the high-frequency peak is also one of two possible frequencies (H<sub>A</sub> or H<sub>B</sub>), see Figure 2. Domains contain signal-label pairs, where the label is a noisy function of the low- and high-frequencies such that low-frequency peaks bear a varying correlation of d with the label and high-frequency peaks bear an invariant correlation of 75% with the label
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/SF_dom.png" alt="spuriousfourier-dom" class="domain">
-                        <p>Figure 3: Spurious Fourier domains</p>
-                    </div>
-                    <hr />
-                    <h1 class="list-item" id="tcmnist">Temporal Colored MNIST</h1>
-                    <h2 class="list-item" id="tcmnist-motivation">Motivation</h2>
-                    <p>
-                        In this effort to bring to light the new challenges in sequential/temporal data, we create this toy dataset in order to address the notion of domain definitions in sequential/temporal data. With this one dataset we investigate 2 domain definition paradigms.
-                    </p>
-                    <p>
-                        The first paradigm is the same used in the image modality, where whole samples (or sequences) are sampled from a given domain. An example of this would be EEG data from patients taken from different machines, where whole recordings belong to a given machine and therefore it is most practical to define the domains as such.
-                    </p>
-                    <p>
-                        The second paradigm, that is unique to sequential data, is that the domain definitions are a function of time. In other words, steps or groups of steps in sequences are sampled from different domains. An example of this would be stock market data from the past years where all indexes from the market are impacted in the same way in a given year, but that is changing year by year from societal events. With this logic one could assume that the stock market behavior of the year 2020 is OoD from the stock prices of all of the years before. The important point here is that the time domain affects all time series in the same way at a given time. 
-                    </p>
-                    <h2 class="list-item" id="tcmnist-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/TCMNIST_explanatory_task.png" alt="tcmnist-problem" class="task">
-                        <p>Figure 4: Temporal Colored MNIST task</p>
-                    </div>
-                    <p>
-                        In light of the previously mentioned cow or camel classification problem, \citet{IRM} proposed the CMNIST dataset as a synthetic investigation of this problem. We propose an extension of this widely used dataset to time series, where we explore new domain formulations in multiple prediction (Section~\ref{sect:multiple_prediction}) tasks. 
-                    </p>
-                    <p>
-                        In Temporal Colored MNIST (TCMNIST), we create a binary classification task of video frames. Videos are sequences of four MNIST digits where the goal is to predict whether the sum of the current and previous digits in the sequence is odd or even, see Figure~\ref{fig:tcmnist_explain_task}. Prediction is made for all frames except for the first one. We use this one task definition to investigate both domain definition paradigms presented in Section~\ref{sect:problem_formulation_time_series}: Source-domains (Example~\ref{ex:source_domains}) and Time-domains (Example~\ref{ex:time_domains}).
-                    </p>
-                    <h3 class="list-item" id="tcmnist-seq">Temporal Colored MNIST Sequences</h3>
-                    <p>
-                        In this dataset we define the domains to the original way of doing domains, where whole sequences are sampled from a domain. This means that we color the whole sequences according to a constant correlation value that is defined by the domain: [10%, 80%, 90%].
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/TCMNIST_seq.png" alt="tcmnist-seq" class="domain">
-                        <p>Figure 5: Temporal Colored MNIST <b>Sequences</b> domains</p>
-                    </div>
-                    <h3 class="list-item" id="tcmnist-step">Temporal Colored MNIST Steps</h3>
-                    <p>
-                        In this dataset we define the domains the novel way, where steps in the sequence are sampled from a domain. So a single frame in the sequence of digits is gonna have constant correlation value across all samples that is defined by the domain: [10%,80%,90%]
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/TCMNIST_step.png" alt="tcmnist-step" class="domain" style="width: 40%;">
-                        <p>Figure 6: Temporal Colored MNIST <b>Steps</b> domains</p>
-                    </div>
-                    <hr />
-                    <h1 class="list-item" id="CAP">CAP</h1>
-                    <h2 class="list-item" id="CAP-motivation">Motivation</h2>
-                    <p>
-                        A recurrent problem in many modalities of the computational medicine field is that models trained on data coming from a given recording machine will not generalize to data coming from unseen machines. This is a problem as it can cause problems within the same institution as a false sense of confidence could be attributed to a model that, even though it was trained on data gathered from the same procedure, the simple fact of using a new machine used to gather data brings with it a distributional shift that causes the model to not perform as well as it did during training. This dataset is specifically designed to investigate the generalization of models to unseen machines with data acquisition following similar procedures, as all data was gathered in the same medical center.
-                    </p>
-                    <h2 class="list-item" id="CAP-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/CAP_task.png" alt="CAP-problem" class="task">
-                        <p>Figure 7: CAP task</p>
-                    </div>
-                    <p>
-                        We consider the sleep classification task which consists of the 6 stages of sleep classification task from EEG measurements. The data comes from 5 different machines which act as 5 different domains. Patients are also different between domains.
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/CAP_dom.png" alt="CAP-dom" class="domain">
-                        <p>Figure 8: CAP domains</p>
-                    </div>
-                    <h2 class="list-item" id="CAP-source-citation">Source & Citation</h2>
-                        <p class="Citation-box">
-                            [1] Terzano MG, Parrino L, Sherieri A, Chervin R, Chokroverty S, Guilleminault C, Hirshkowitz M, Mahowald M, Moldofsky H, Rosa A, Thomas R, Walters A. Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep. Sleep Med. 2001 Nov;2(6):537-53. doi: 10.1016/s1389-9457(01)00149-6. Erratum in: Sleep Med. 2002 Mar;3(2):185. PMID: 14592270.
-                            <br />
-                            <br />
+    </div>
+</body>
 
-                            [2] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
-                        </p>
-                    <h2 class="list-item" id="CAP-license">License</h2>
-                        <p>
-                            This project is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0. </a>
-                        </p>
-                    <hr />
-                    <h1 class="list-item" id="SEDFx">SEDFx</h1>
-                    <h2 class="list-item" id="SEDFx-motivation">Motivation</h2>
-                    <p>
-                        In computational medicine, the ultimate goal is to train a model on a set of data gathered from a small number of patients and then to apply this model on data coming from new patients in order to assist on the diagnosis of the patient. This generalization between observed patients in the training set of data and new patients at inference however isn’t something that is guaranteed. There may be distributional shifts in the demographics of the data used for training and data on which we use the model. These demographics shifts include age, gender, ethnicity and more. We study this problem of patient demographic shifts in the SEDFx dataset.
-                    </p>
-                    <h2 class="list-item" id="SEDFx-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/sedfx_task.png" alt="SEDFx-problem" class="task">
-                        <p>Figure 9: SEDFx task</p>
-                    </div>
-                    <p>
-                        We consider the sleep classification task which consists of the 6 stages of sleep classification task from EEG measurements. The data is split into 5 age-groups.
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/sedfx_dom.png" alt="SEDFx-dom" class="domain">
-                        <p>Figure 10: SEDFx domains</p>
-                    </div>
-                    <h2 class="list-item" id="SEDFx-source-citation">Source & Citation</h2>
-                    <p class="Citation-box">
-                        [1] B. Kemp, A. H. Zwinderman, B. Tuk, H. A. C. Kamphuisen and J. J. L. Oberye, "Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG," in IEEE Transactions on Biomedical Engineering, vol. 47, no. 9, pp. 1185-1194, Sept. 2000, doi: 10.1109/10.867928.
-                        <br />
-                        <br />
-
-                        [2] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
-                    </p>
-                    <h2 class="list-item" id="SEDFx-license">License</h2>
-                    <p>
-                        This project is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0. </a>
-                    </p>
-                    <hr />
-                    <h1 class="list-item" id="PCL">PCL</h1>
-                    <h2 class="list-item" id="PCL-motivation">Motivation</h2>
-                    <p>
-                        In computational medicine, the ultimate goal is to train a model on a set of data gathered from a small number of patients and then to apply this model on data coming from new patients in order to assist on the diagnosis of the patient. Aside from previously mentioned distributional shifts caused by shifts in patient demographic and changes in machinery used for measurements, another contributing factor to distributional shift is the human factor impacting the procedures surrounding the data recording. Small changes in data gathering procedures can lead to failure of generalization between medical groups and hospitals, one known instance of this failure mode is the Camelyon17 dataset from WILDS. This challenge is especially prevalent in temporal medical data as machinery - like EEG, MEG and others - are very complex tools which are greatly affected by non-linear effects and modulations caused by context and preparations made before the recording. We investigate this procedural shift in data in the PCL dataset.
-                    </p>
-                    <h2 class="list-item" id="PCL-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/PCL_task.png" alt="PCL-problem" class="task">
-                        <p>Figure 11: PCL task</p>
-                    </div>
-                    <p>
-                        There are 3 datasets [PhysionetMI, BNCI2014001, Lee2019_MI], which feature EEG recording from multiple research groups that share a common task. This task is binary classification of imagined hand movements (left or right) from EEG data. Two of those datasets are subsets of the original data as we took the intersection of the common labels across all 3 datasets (BNCI2014001 and Lee2019_MI have 2 more classes that are excluded in the frame of this benchmark).
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/PCL_dom.png" alt="PCL-dom" class="domain">
-                        <p>Figure 12: PCL domains</p>
-                    </div>
-                    <h2 class="list-item" id="PCL-source-citation">Source & Citation</h2>
-                    <p class="Citation-box">
-                        [1] Tangermann, M., Müller, K.R., Aertsen, A., Birbaumer, N., Braun, C., Brunner, C., Leeb, R., Mehring, C., Miller, K.J., Mueller-Putz, G. and Nolte, G., 2012. Review of the BCI competition IV. Frontiers in neuroscience, 6, p.55.
-                        <br />
-                        <br />
-                        [2] Schalk, G., McFarland, D.J., Hinterberger, T., Birbaumer, N. and Wolpaw, J.R., 2004. BCI2000: a general-purpose brain-computer interface (BCI) system. IEEE Transactions on biomedical engineering, 51(6), pp.1034-1043.
-                        <br />
-                        <br />
-                        [3] Goldberger, A.L., Amaral, L.A., Glass, L., Hausdorff, J.M., Ivanov, P.C., Mark, R.G., Mietus, J.E., Moody, G.B., Peng, C.K., Stanley, H.E. and PhysioBank, P., PhysioNet: components of a new research resource for complex physiologic signals Circulation 2000 Volume 101 Issue 23 pp. E215–E220.
-                        <br />
-                        <br />
-                        [4] Lee MH, Kwon OY, Kim YJ, Kim HK, Lee YE, Williamson J, Fazli S, Lee SW. EEG dataset and OpenBMI toolbox for three BCI paradigms: an investigation into BCI illiteracy. Gigascience. 2019 May 1;8(5):giz002. doi: 10.1093/gigascience/giz002. PMID: 30698704; PMCID: PMC6501944.
-                    </p>
-                    <h2 class="list-item" id="PCL-license">License</h2>
-                    <p>
-                        This dataset gathers data from multiple sources, therefore has multiple licenses attached to the dataset. The physionetMI dataset is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0.</a> The Lee2019_MI dataset is licensed under <a href="https://creativecommons.org/share-your-work/public-domain/cc0"> No Rights Reserved License.</a> The BNCI2014001 dataset is freely available on the <a href="http://www.bbci.de/competition/iv/"> BCI Competition IV website</a> with the only restriction that [1] is referenced upon publication of results.
-                    </p>
-                    <hr />
-                    <h1 class="list-item" id="HHAR">HHAR</h1>
-                    <h2 class="list-item" id="HHAR-motivation">Motivation</h2>
-                    <p>
-                        In temporal data, the invariant features needed to make predictions might be highly convolved in time with other uninformative features. The ability to extract causal temporal features from data is a very hard task that is needed in order to find a representation of the data that is invariant and interpretable. This dataset serves the purpose of investigating the ability of models to ignore uninformative information from complex signals.
-                    </p>
-                    <h2 class="list-item" id="HHAR-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/HHAR_task.png" alt="HHAR-problem" class="task">
-                        <p>Figure 13: HHAR task</p>
-                    </div>
-                    <p>
-                        The task is a 6-class activity classification task from sensor data gathered from portable devices (phones and smart watches). Sensor data consists of 3-axis accelerometer measurements and 3-axis gyroscope measurements. There are 5 domains stemming from 5 different devices: [Nexus4, S3, S3Mini, LGWatch, Gear watch]. The challenge is to find the invariant sensory features across phones and watches, which aren’t located on the same body parts. Here watches might have extra oscillations on certain axes compared to phones while walking for example since they are worn on the wrists.
-                    </p>
-                    <div class="img-with-text">
-                        <img src="assets/HHAR_dom.png" alt="HHAR-dom" class="domain">
-                        <p>Figure 14: HHAR domains</p>
-                    </div>
-                    <h2 class="list-item" id="HHAR-source-citation">Source & Citation</h2>
-                    <p class="Citation-box">
-                        [1] Allan Stisen, Henrik Blunck, Sourav Bhattacharya, Thor Siiger Prentow, Mikkel Baun Kjærgaard, Anind Dey, Tobias Sonne, and Mads Møller Jensen "Smart Devices are Different: Assessing and Mitigating Mobile Sensing Heterogeneities for Activity Recognition" In Proc. 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015), Seoul, Korea, 2015.
-                        <br />
-                        <br />
-
-                        [2] Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
-                    </p>
-                    <h2 class="list-item" id="HHAR-license">License</h2>
-                    <p>
-                        This project is licensed under the <a href="https://opendatacommons.org/licenses/by/summary/index.html"> Open Data Commons Attribution license v1.0. </a>
-                    </p>
-                    <hr />
-                    <h1 class="list-item" id="LSA64">LSA64</h1>
-                    <h2 class="list-item" id="LSA64-motivation">Motivation</h2>
-                    <div class="img-with-text">
-                        <img src="assets/LSA64_task.png" alt="LSA64-tast" class="task">
-                        <p>Figure 15: LSA64 task</p>
-                    </div>
-                    <p>
-                        Communication is an idiosyncratic way to convey information through different mediums: text, speech, body language, etc. Some mediums, though, are more idiosyncratic than others. For example, text has less individuality than body language or speech. If AI systems hope one day to interact with humans effectively, models need to be able to generalize their learnings to previously unseen mannerism, accents, intonations and other variations in communication that are subtle but have great impact on the information conveyed. This dataset aims to benchmark this ability of models to understand information coming from unseen individuals.
-                    </p>
-                    <h2 class="list-item" id="LSA64-problem">Problem</h2>
-                    <div class="img-with-text">
-                        <img src="assets/LSA64_dom.png" alt="LSA64-dom" class="domain">
-                        <p>Figure 16: LSA64 domains</p>
-                    </div>
-                    <p>
-                        The task of this dataset is to perform 64 class classification on videos of signed words in Argentinian Sign Language. Videos are of 10 different signers, we create 5 domains consisting of 2 speakers each.
-                    </p>
-                    <h2 class="list-item" id="LSA64-source-citation">Source & Citation</h2>
-                    <p class="Citation-box">
-                        [1] Ronchetti, F., Quiroga, F., Estrebou, C., Lanzarini, L., & Rosete, A. (2016). LSA64: A Dataset of Argentinian Sign Language. XX II Congreso Argentino de Ciencias de la Computación (CACIC).
-                    </p>
-                    <h2 class="list-item" id="LSA64-license">License</h2>
-                    <p>
-                        This project is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License </a>
-                    </p>
-                </div>
-            </div>  
-        </div>
-    </body>
 </html>
-    
