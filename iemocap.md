@@ -7,7 +7,7 @@ layout: default
 
 - **Problem:** We consider the emotion recognition task. The dataset has 11 time domains, where each domain contains data from a different emotion shift during conversations. The goal is to perform well on all conversational emotion shifts.
 
-- **Download & preprocess:** THe IEMOCAP is only accessible through the <a href="https://sail.usc.edu/iemocap/iemocap_release.htm">IEMOCAP website</a>. You will need to adhere to their license agreement to get access to the raw data, and then run the preprocessing script by running the following command:
+- **Download & preprocess:** The IEMOCAP is only accessible through the <a href="https://sail.usc.edu/iemocap/iemocap_release.htm">IEMOCAP website</a>. You will need to adhere to their license agreement to get access to the raw data, and then run the preprocessing script by running the following command:
 ```sh
 python -m woods.scripts.fetch_and_preprocess IEMOCAP --data_path /path/to/downloaded/data
 ```
