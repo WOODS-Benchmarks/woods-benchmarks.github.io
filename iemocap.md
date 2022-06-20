@@ -17,4 +17,4 @@ python -m woods.scripts.fetch_and_preprocess IEMOCAP --data_path /path/to/downlo
 [1] Busso, Carlos, et al. "IEMOCAP: Interactive emotional dyadic motion capture database." Language resources and evaluation 42.4 (2008): 335-359.
 
 ### License
-This dataset is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+This dataset is licensed under its own [license](https://sail.usc.edu/iemocap/iemocap_release.htm). 
