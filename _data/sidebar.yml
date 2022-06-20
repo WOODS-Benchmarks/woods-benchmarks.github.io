@@ -1,5 +1,16 @@
 docs_list_title: Datasets
 docs:
-
 - title: CAP
   url: cap.html
+- title: SEDFx
+  url: sedfx.html
+- title: PCL
+  url: pcl.html
+- title: LSA64
+  url: lsa64.html
+- title: HHAR
+  url: hhar.html
+- title: AusElec
+  url: auselec.html
+- title: IEMOCAP
+  url: iemocap.html
