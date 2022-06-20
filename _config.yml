@@ -1,6 +1,6 @@
 title: WOODS
 description: Benchmarks for Out-of-Distribution Generalization in Time Series
 repository_url: https://github.com/jc-audet/WOODS
-repository_nwo: jc-audet/WOODS
+documentation_url: https://woods.readthedocs.io/en/latest/
 logo: /assets/banner.png
 theme: jekyll-theme-minimal
