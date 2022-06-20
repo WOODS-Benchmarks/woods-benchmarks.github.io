@@ -12,7 +12,7 @@ python -m woods.scripts.download_datasets CAP --data_path /path/to/data
 - **Preprocessing** The preprocessing script can be found on the [WOODS preprocessing script](https://github.com/jc-audet/WOODS/blob/main/woods/scripts/fetch_and_preprocess.py). You can run the preprocessing yourself by running the following command:
 
 ```sh
-<sup><sub>python -m woods.scripts.fetch_and_preprocess CAP --data_path /path/to/data</sub></sup>
+python -m woods.scripts.fetch_and_preprocess CAP --data_path /path/to/data
 ```
 
 ### References
