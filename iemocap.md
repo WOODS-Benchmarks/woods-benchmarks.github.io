@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## AusElec
+## AusElec: <br>Emotion recognition across different conversational emotion shifts 
 - **Motivation:** Speakers tend to maintain an emotional state over a conversation. However, external stimuli can invoke a shift in the emotional state of speakers. Such emotion shift are often sparsely represented in the data, making it hard for models to classify them adequately. Recent work on emotion recognition models show the failure of existing models to adapt to those emotion shift. We study the performance of models on emotional shift with the IEMOCAP dataset.
 
 - **Problem:** We consider the emotion recognition task. The dataset has 11 time domains, where each domain contains data from a different emotion shift during conversations. The goal is to perform well on all conversational emotion shifts.

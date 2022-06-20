@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## PCL
+## PCL: <br>Motor imagery classification across data-gathering procedures
 - **Motivation:** Aside from changes in the recording device and shifts in patient demographics, human intervention in the data gathering process is another contributing factor to the distribution shift that can lead to failure of clinical models (e.g., Camelyon17). This challenge is especially prevalent in temporal medical data (e.g., EEG, MEG, and others) because recording devices are complex tools greatly affected by nonlinear effects and modulations. These effects are often caused by context and preparations made before the recording. We study these procedural shifts with the PCL dataset. 
 
 - **Problem:** We consider the motor imagery task from electroencephalographic (EEG) measurements. The dataset has three source domains, where each domain contains a dataset from a different research group carrying out the same task. The goal is to generalize to unseen data gathering processes.

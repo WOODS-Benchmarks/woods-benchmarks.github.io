@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## AusElec
+## AusElec: <br>Forecasting of energy consumption throughout the year
 - **Motivation:** Seasonality is the property of time series where recurring characteristics appear every cycle of a fixed period, e.g., weekly. A common practice in the forecasting field is to provide models with additional information, e.g., day of week in order to allow models to leverage seasonality for better predictions. However, holidays is a seasonality of time series that is very sparse which models often fail to capture. We study the performance of models on sparse seasonality with the AusElec dataset.
 
 - **Problem:** We consider the electricity consumption forecasting task. The dataset has 13 time domains, where each domain contains data from different months and holidays. The goal is to perform well on all seasonalities.

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## LSA64
+## HHAR: <br>Human activity recognition across smart devices
 - **Motivation:** The intrinsic biases from inaccurate and poorly calibrated sensors of smart devices, along with the accumulated biases from everyday use makes human activity recognition a notoriously difficult task when task when done across devices. Contrary to static tasks where uninformative features can often be segmented out from the input features (e.g., background when classifying an animal from an image), invariant features in time series are often highly convoluted with other spurious features. We study the ability of models to ignore spurious information from complex signals with the HHAR dataset.
 
 - **Problem:** We consider the human activity classification task from accelerometer and gyroscope measurements of smartphones and smartwatches. The dataset has five source domains, where each domain contains data gathered with a different device. The goal is to generalize to unseen smart devices.

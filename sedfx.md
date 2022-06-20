@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## SEDFx
+## SEDFx: <br>Sleep classification across age groups
 - **Motivation:** In clinical settings, we train a model on the data gathered from a limited number of patients and hope this model will generalize to new patients in the future. However, this generalization between observed patients in the training dataset and new patients is not guaranteed. Distribution shifts caused by shifts in patient demographics (e.g., age, gender, and ethnicity) can cause the model to fail. We study age demographic shift with the SEDFx dataset. 
 
 - **Problem:** We consider the sleep classification task from EEG measurements. The dataset has four source domains, where each domain contains data from participants of a certain age group. The goal is to generalize to an unseen age demographic.
@@ -23,4 +23,4 @@ python -m woods.scripts.fetch_and_preprocess SEDFx --data_path /path/to/data
 [2] Goldberger, Ary L., et al. "PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals." circulation 101.23 (2000): e215-e220.
 
 ### License
-This project is licensed under the [Open Data Commons Attribution license v1.0.](https://opendatacommons.org/licenses/by/summary/index.html)
+This dataset is licensed under the [Open Data Commons Attribution license v1.0.](https://opendatacommons.org/licenses/by/summary/index.html)

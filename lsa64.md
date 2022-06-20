@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## LSA64
+## LSA64: <br>Sign language video classification across speakers
 - **Motivation:** Communication is an individualistic way to convey information through different media: text, speech, body language, and many others. However, some media are more distinctive and challenging than others. For example, text communication has less inter-individual variability than body language or speech. If deep learning systems hope to interact with humans effectively, models need to generalize to new and evolving mannerisms, accents, and other subtle variations in communication that significantly impact the meaning of the message conveyed. We study the ability of models to recognize information coming from unseen individuals with the LSA64 dataset.
 
 - **Problem:** We consider the video classification of signed words in Argentinian Sign Language. The dataset has five source domains, where each domain contains videos of different signers. The goal is to generalize to unseen signers.
