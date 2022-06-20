@@ -10,8 +10,9 @@ layout: default
 python -m woods.scripts.download_datasets CAP --data_path /path/to/data
 ```
 - **Preprocessing** The preprocessing script can be found on the [WOODS preprocessing script](https://github.com/jc-audet/WOODS/blob/main/woods/scripts/fetch_and_preprocess.py). You can run the preprocessing yourself by running the following command:
+
 ```sh
-python -m woods.scripts.fetch_and_preprocess CAP --data_path /path/to/data
+<sup><sub>python -m woods.scripts.fetch_and_preprocess CAP --data_path /path/to/data<sub><sup>
 ```
 
 ### References
@@ -21,4 +22,4 @@ python -m woods.scripts.fetch_and_preprocess CAP --data_path /path/to/data
 [2] Goldberger, Ary L., et al. "PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals." circulation 101.23 (2000): e215-e220.
 
 ### License
-This project is licensed under the [Open Data Commons Attribution license v1.0.](https://opendatacommons.org/licenses/by/summary/index.html)
+This dataset is licensed under the [Open Data Commons Attribution license v1.0.](https://opendatacommons.org/licenses/by/summary/index.html)
