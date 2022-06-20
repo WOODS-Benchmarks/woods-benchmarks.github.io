@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## CAP
+## CAP: <br> Sleep classification across different machines
 - **Motivation:** A recurrent problem in computational medicine is that models trained on data from a given recording device will not generalize to data coming from another device, even when both devices are from a similar equipment provider. Failure to generalize to unseen machines can cause critical issues for clinical practice because a false sense of confidence in a model could lead to a false diagnosis. We study these machinery-induced distribution shifts with the CAP dataset.
 - **Problem:** We consider the sleep stage classification task from electroencephalographic (EEG) measurements. The dataset has five source domains, where each domain contains data gathered with a different machine. The goal is to generalize to unseen machines.
 - **Downloads:** The preprocessed data is available on [Academic Torrents](https://academictorrents.com/details/500d0c473108ef72e01b0f8037251b09331467f9) and via [Google Drive](https://drive.google.com/uc?id=1NFwX2CqLrenWF4az0c6J-OglAoD48PAT). It can also be directly downloaded through the [WOODS dataset download script](https://github.com/jc-audet/WOODS/blob/main/woods/scripts/download_datasets.py) by running the following command:
