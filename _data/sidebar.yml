@@ -1,5 +1,11 @@
 docs_list_title: Datasets
 docs:
+- title: Spurious-Fourier
+  url: spurious-fourier.html
+- title: Temporal Colored MNIST - Source
+  url: tcmnist-source.html
+- title: Temporal Colored MNIST - Time
+  url: tcmnist-time.html
 - title: CAP
   url: cap.html
 - title: SEDFx
