@@ -1,6 +1,6 @@
 docs_list_title: Datasets
 docs:
-- title: CAP
+- title: CAP - Sleep classification across different machines
   url: cap.html
 - title: SEDFx
   url: sedfx.html
